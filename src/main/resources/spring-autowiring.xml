@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd" 
+        default-autowire="constructor">
+        <!--默认自动装配方式-->
+        <!--byName 根据bean的id装配，bean的id要与属性名一致-->
+        <!--byType 根据bean的类型装配-->
+        <!--constructor 根据构造方法装配属性，要提供构造方法-->
+        <bean id="autoWiringService" class="com.imooc.autowiring.AutoWiringService" ></bean>
+        
+        <bean id="autoWiringDAO" class="com.imooc.autowiring.AutoWiringDAO" ></bean>
+</beans>

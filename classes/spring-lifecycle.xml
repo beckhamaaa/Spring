@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       default-init-method="defautInit" default-destroy-method="defaultDestroy">
+    <!--default-init-method, default-destroy-method不是必需的，在类中定义的方法也可以不要，不会报错,只有xml中没定义init-method和destroy-method才会执行默认的初始化和销毁方法-->
+        <bean id="beanLifeCycle" class="com.imooc.lifecycle.BeanLifeCycle" init-method="start" destroy-method="stop"/>
+        <bean id="exampleInitializingBean" class="com.imooc.lifecycle.ExampleInitializingBean"/>
+        <bean id="exampleDisposableBean" class="com.imooc.lifecycle.ExampleDisposableBean"/>
+    <!--在同一个Spring容器中，ExampleInitializingBean类中的方法也会执行-->
+
+</beans>
